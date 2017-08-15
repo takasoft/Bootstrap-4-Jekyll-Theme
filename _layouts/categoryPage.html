@@ -1,0 +1,12 @@
+---
+layout: page
+---
+
+<div class="list-group">
+	{% for category in site.categories %}
+	  {% assign myCategory = category | first %}
+    <a class="list-group-item list-group-item-action" href="{{ site.baseurl }}/category/{{ myCategory }}">
+      {{ myCategory }}
+    </a>
+	{% endfor %}
+</div>
