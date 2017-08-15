@@ -1,0 +1,206 @@
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 5px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+}
+
+html {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 58em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+h4 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+h2.archive-page-date {
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
+
+/*
+ * small settings
+ */
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+img.homethumbnail {
+    display: block;
+    margin: 0 auto;
+    max-height:400px;
+}
+
+img.postthumbnail {
+    display: block;
+    margin: 0 auto;
+    width:100%;
+    max-width:600px;
+}
+
+/* Meta data line below post title */
+.post-info {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+}
+
+/* Meta data line below post title */
+.post-date {
+  margin-right: 8px;
+  color:inherit;
+}
+
+/* Meta data line below post title */
+.post-category {
+  color:inherit;
+}
+.post-category a,
+.post-category a:link,
+.post-category a:visited,
+.post-category a:hover {
+  color:inherit;
+}
+
+/* reference color */ 
+.reference {
+  color: #9a9a9a;
+}
+
+/* footer to be used */
+.simple-footer {
+  color: #9a9a9a;
+}
+.simple-footer a,
+.simple-footer a:link,
+.simple-footer a:visited,
+.simple-footer a:hover {
+  color:inherit;
+}
+
+/*
+ * Posts and pages
+ *
+ * Each post is wrapped in `.post` and is used on default and post layouts. Each
+ * page is wrapped in `.page` and is only used on the page layout.
+ */
+
+.page,
+.post {
+  margin-bottom: 4em;
+}
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+  color: #303030;
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+/* Related posts */
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h4 {
+  margin-top: 0;
+  padding-top: 10px;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+.related-posts li a:link {
+  color: #000;
+}
+.related-posts li a:visited {
+  color: #777;
+}
+.related-posts li a:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: inherit;
+}
+
+
+.related-post {
+  color:inherit;
+}
+.post-category a,
+.post-category a:link,
+.post-category a:visited,
+.post-category a:hover {
+  color:inherit;
+}
+
+
+/* Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.sidebar`.
+ */
+
+.content {
+  padding-top:    4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 48em) {
+  .content {
+    max-width: 38rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .content {
+    margin-left: 22rem;
+    margin-right: 4rem;
+  }
+}
