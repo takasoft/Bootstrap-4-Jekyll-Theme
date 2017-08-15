@@ -2,7 +2,7 @@
 
 Simple Bootstrap 4 theme for Jekyll
 
-- This theme is best suited for github page because it uses github page dependencies only.
+- This theme is best suited for your Github Page because it uses [Github Pages dependencies](https://pages.github.com/versions/) only.
 - This theme is very light weight. It loads very fast even in 2G connections.
 
 [Demo](https://takao42.github.io/Bootstrap-4-Jekyll-Theme/)
