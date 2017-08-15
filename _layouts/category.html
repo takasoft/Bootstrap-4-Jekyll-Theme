@@ -7,7 +7,7 @@ layout: page
 {% endunless %}
 
 {% unless site.categories[page.category].size > 0 %}
-  <p>現在このカテゴリーに記事がありません。</p>
+  <p>There is no article in this category.</p>
 {% endunless %}
 
 {% for post in site.categories[page.category] %}
