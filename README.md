@@ -9,7 +9,7 @@ Simple Bootstrap 4 theme for Jekyll
 
 ## Some manual setups
 
-You have to create <new category name>.html with the following content in the category folder when you create a new category.
+You have to create `<new category name>.html` with the following content in the `category` folder when you create a new category.
 
 ```markdown
 ---
