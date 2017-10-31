@@ -55,3 +55,11 @@ title: new category name
 category: new-category-name
 ---
 ```    
+
+## Local Development
+
+```shell
+gem install jekyll bundler
+bundle install
+bundle exec jekyll serve
+```
