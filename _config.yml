@@ -2,9 +2,9 @@
 permalink:        /:title
 
 # Setup
-title:            Test Site
-tagline:          Test tagline
-description:      Test description
+title:            TakaSoft
+tagline:          Making awesome software
+description:      Making awesome software
 url:              
 baseurl:          /Bootstrap-4-Jekyll-Theme
 
