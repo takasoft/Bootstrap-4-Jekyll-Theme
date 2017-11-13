@@ -66,9 +66,13 @@ bundle exec jekyll serve
 
 ## How to import from wordpress
 
-copy all files in _posts
+Install "WordPress to Jekyll Exporter"
 
-```
+Tools -> Export to Jekyll
+
+Unzip the file and copy _posts, _config.yml, wp-content, and any .md files in the root to your repo.
+
+```shell
 cd ./_posts
 # replace image links
 find . -name '*.md' -print0 | xargs -0 sed -i "" "s/http:\/\/www.yourwebsite.com\/wp-content\/uploads/{{ site.baseurl }}/wp-content/uploads/g"
