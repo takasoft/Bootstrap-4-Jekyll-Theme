@@ -63,3 +63,20 @@ gem install jekyll bundler
 bundle install
 bundle exec jekyll serve
 ```
+
+## How to import from wordpress
+
+Install "WordPress to Jekyll Exporter"
+
+Tools -> Export to Jekyll
+
+Unzip the file and copy _posts, _config.yml, wp-content, and any .md files in the root to your repo.
+
+```shell
+cd ./_posts
+# replace image links
+find . -name '*.md' -print0 | xargs -0 sed -i "" "s/http:\/\/www.yourwebsite.com\/wp-content\/uploads/{{ site.baseurl }}/wp-content/uploads/g"
+# replace code pre tags
+find . -name '*.md' -print0 | xargs -0 sed -i "" "s/<pre>/<pre><code class=\"bash\">/g"
+find . -name '*.md' -print0 | xargs -0 sed -i "" "s/<\/pre>/<\/code><\/pre>/g"
+```
