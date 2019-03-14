@@ -6,6 +6,6 @@ permalink: /about
 
 ### Hello
 
-This is test about page.
+This is a test of about page.
 
 

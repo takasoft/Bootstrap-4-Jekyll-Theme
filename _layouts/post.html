@@ -5,7 +5,11 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   {% if page.image %}
-    <img src="{{ site.baseurl }}{{ page.image }}" class="postthumbnail"><br>
+  	{% if page.hideTnPost %}
+    {% else %}
+      <img src="{{ site.baseurl }}{{ page.image }}" class="postthumbnail">
+    {% endif%}
+    <br>
   {% endif %}
   <span class="post-info">
     <span class="post-date">

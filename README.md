@@ -36,7 +36,6 @@ Change `baseurl` to your repository's name.
 If it is your-username.github.io then set it empty.
 
 > There are 2 different ways that you can make changes to your blog's files:
-
 > 1. Edit files within your new repository in the browser at gitHub.com (easiest).
 > 2. Clone down your repository and make updates locally, then push them to your GitHub repository.
 
@@ -44,7 +43,7 @@ If it is your-username.github.io then set it empty.
 
 Go to `/_posts/` and create a markdown file in this format: `year-month-day-title.md` to publish your first blog post. 
 
-### Some manual setups
+### Necessary manual setup
 
 - You have to create `<new category name>.html` with the following content in the `category` folder when you create a new category.
 
@@ -56,21 +55,30 @@ category: new-category-name
 ---
 ```    
 
+### Additional Tips
+
+- set hideTnPost in post if you want to hide your post thumbnail.
+- set google_analytics in _config.yml if you want to log traffic on your site.
+- embed a youtube video by {% include youtubePlayer.html id="video-id" %}.
+
 ## Local Development
+
+Install Ruby and Gem
 
 ```shell
 gem install jekyll bundler
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve # start development server
 ```
 
-## How to import from wordpress
+* Note: if you have changed _config.yml, you have to restart the development server
 
-Install "WordPress to Jekyll Exporter"
+### How to import from wordpress
 
-Tools -> Export to Jekyll
-
-Unzip the file and copy _posts, _config.yml, wp-content, and any .md files in the root to your repo.
+1. Install "WordPress to Jekyll Exporter"
+2. Tools -> Export to Jekyll
+3. Unzip the exported file and copy _posts, wp-content, and any .md files in the root to your repo.
+4. Copy part of exported _config.yml to _config.yml
 
 ```shell
 cd ./_posts

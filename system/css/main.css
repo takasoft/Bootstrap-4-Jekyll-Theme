@@ -67,8 +67,8 @@ img.homethumbnail {
 img.postthumbnail {
     display: block;
     margin: 0 auto;
-    width:100%;
-    max-width:600px;
+    width: 100%;
+    max-width:450px;
 }
 
 /* Meta data line below post title */
@@ -203,4 +203,13 @@ img.postthumbnail {
     margin-left: 22rem;
     margin-right: 4rem;
   }
+}
+
+.google-play-badge {
+  max-width:300px;
+}
+
+.navbar-custom {
+  padding-bottom: 0px; 
+  margin-bottom: -30px;
 }

@@ -3,6 +3,13 @@ layout: default
 title: Home
 ---
 
+{% if site.headline %}
+<div class="post">
+    {% include headline.html %}
+    <hr>
+</div>
+{% endif %}
+
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -45,12 +52,20 @@ title: Home
 <!-- Pagination -->
 <nav aria-label="pagenation navbar">
   <ul class="pagination justify-content-center pagination-lg">
-    {% if paginator.next_page %}
-      <li class="page-item">
-        <a class="page-link" href="{{ site.baseurl }}/page{{paginator.next_page}}">
-          <i class="genericons-neue genericons-neue-previous"></i>
-        </a>
-      </li>
+    {% if paginator.previous_page %}
+      {% if paginator.page == 2 %}
+        <li class="page-item">
+          <a class="page-link" href="{{ site.baseurl }}/">
+            <i class="genericons-neue genericons-neue-previous"></i>
+          </a>
+        </li>
+      {% else %}
+        <li class="page-item">
+          <a class="page-link" href="{{ site.baseurl }}/page{{paginator.previous_page}}">
+            <i class="genericons-neue genericons-neue-previous"></i>
+          </a>
+        </li>
+      {% endif %}
     {% else %}
       <li class="page-item disabled">
         <a class="page-link" href="{{ site.baseurl }}/">
@@ -65,20 +80,12 @@ title: Home
       </a>
     </li>
 
-    {% if paginator.previous_page %}
-      {% if paginator.page == 2 %}
-        <li class="page-item">
-          <a class="page-link" href="{{ site.baseurl }}/">
-            <i class="genericons-neue genericons-neue-next"></i>
-          </a>
-        </li>
-      {% else %}
-        <li class="page-item">
-          <a class="page-link" href="{{ site.baseurl }}/page{{paginator.previous_page}}">
-            <i class="genericons-neue genericons-neue-next"></i>
-          </a>
-        </li>
-      {% endif %}
+    {% if paginator.next_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ site.baseurl }}/page{{paginator.next_page}}">
+          <i class="genericons-neue genericons-neue-next"></i>
+        </a>
+      </li>
     {% else %}
       <li class="page-item disabled">
         <a class="page-link" href="{{ site.baseurl }}/">
@@ -86,5 +93,7 @@ title: Home
         </a>
       </li>
     {% endif %}
+
+    
   </ul>
 </nav>
