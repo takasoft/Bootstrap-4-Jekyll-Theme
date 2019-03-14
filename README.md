@@ -61,7 +61,7 @@ category: new-category-name
 - set google_analytics in _config.yml if you want to log traffic on your site.
 - embed a youtube video by {% include youtubePlayer.html id="video-id" %}.
 
-## Local Development
+### Local Development
 
 Install Ruby and Gem
 
