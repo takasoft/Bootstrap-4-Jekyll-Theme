@@ -43,7 +43,7 @@ If it is your-username.github.io then set it empty.
 
 Go to `/_posts/` and create a markdown file in this format: `year-month-day-title.md` to publish your first blog post. 
 
-### Necessary manual setup
+### Step 4) Necessary manual setup
 
 - You have to create `<new category name>.html` with the following content in the `category` folder when you create a new category.
 
@@ -55,13 +55,13 @@ category: new-category-name
 ---
 ```    
 
-### Additional Tips
+## Additional Tips
 
 - set hideTnPost in post if you want to hide your post thumbnail.
 - set google_analytics in _config.yml if you want to log traffic on your site.
 - embed a youtube video by {% include youtubePlayer.html id="video-id" %}.
 
-### Local Development
+## Local Development
 
 Install Ruby and Gem
 
@@ -73,7 +73,7 @@ bundle exec jekyll serve # start development server
 
 * Note: if you have changed _config.yml, you have to restart the development server
 
-### How to import from wordpress
+## How to import from wordpress
 
 1. Install "WordPress to Jekyll Exporter"
 2. Tools -> Export to Jekyll
