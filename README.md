@@ -5,7 +5,7 @@ Simple Bootstrap 4 theme for Jekyll
 ## Features 
 
 ✓ Command-line workflow, using GitHub.com to create, customize and post to your blog  <br>
-✓ Fully responsive and mobile optimized base theme ([Demo](https://takasoft.github.io/Bootstrap-4-Jekyll-Theme/))  <br>
+✓ Fully responsive and mobile optimized base theme ([Demo](https://takasoft.github.io/Bootstrap-4-Jekyll-Theme/) or [auther's website](https://takasoft.github.io))  <br>
 ✓ Free hosting on your GitHub Pages user site  <br>
 ✓ Very light weight. It loads very fast even in 2G connections.  <br>
 ✓ Markdown blogging  <br>
