@@ -1,42 +1,44 @@
-<nav class="navbar-custom navbar navbar-expand-lg navbar-light bg-faded">
-  <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+  <div class="container">
+    <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.baseurl }}/">Home <span class="sr-only">
-          (current)
-        </span></a>
-      </li>
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-          <li class="nav-item {% if page.url == node.url %}active{% endif %}">
-            <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">
-              {{ node.title }}
-            </a>
-          </li>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="{{ site.baseurl }}/category/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Category
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          {% for category in site.categories %}
-            {% assign myCategory = category | first %}
-              <a class="dropdown-item {% if page.category == myCategory %}active{% endif %}" href="{{ site.baseurl }}/category/{{ myCategory }}">
-                {{ myCategory }}
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}">Home <span class="sr-only">
+            (current)
+          </span></a>
+        </li>
+        {% assign pages_list = site.pages %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.layout == "page" %}
+            <li class="nav-item {% if page.url == node.url %}active{% endif %}">
+              <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ node.url }}">
+                {{ node.title }}
               </a>
-          {% endfor %}
-        </div>
+            </li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{{ site.url }}{{ site.baseurl }}/category/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            {% for category in site.categories %}
+              {% assign myCategory = category | first %}
+                <a class="dropdown-item {% if page.category == myCategory %}active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/category/{{ myCategory }}">
+                  {{ myCategory }}
+                </a>
+            {% endfor %}
+          </div>
 
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

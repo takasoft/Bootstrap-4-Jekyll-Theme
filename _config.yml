@@ -5,8 +5,9 @@ permalink:        /:title
 title:            TakaSoft
 tagline:          Making awesome software
 description:      Making awesome software
-url:              
+url:              https://takasoft.github.io
 baseurl:          /Bootstrap-4-Jekyll-Theme
+rawurl:	          
 # Add this and create headline.html in _includes directory
 # headline: true         
 # Add your google_analytics ID if you need it

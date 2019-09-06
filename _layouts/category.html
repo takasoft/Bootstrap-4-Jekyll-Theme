@@ -2,29 +2,31 @@
 layout: page
 ---
 
-{% unless page.content == '' %}
-  <p>{{ page.content }}</p>
-{% endunless %}
+<div class="container">
+  {% unless page.content == '' %}
+    <p>{{ page.content }}</p>
+  {% endunless %}
 
-{% unless site.categories[page.category].size > 0 %}
-  <p>There is no article in this category.</p>
-{% endunless %}
+  {% unless site.categories[page.category].size > 0 %}
+    <p>There is no article in this category.</p>
+  {% endunless %}
 
-{% for post in site.categories[page.category] %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
+  {% for post in site.categories[page.category] %}
+  <div class="post-preview">
+    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+      <h3 class="post-title">            
+        {{ post.title }}
+      </h3>
+      {% if post.subtitle %}
+      <h4 class="post-subtitle">
+        {{ post.subtitle }}
+      </h4>
+      {% endif %}
     </a>
     <p class="post-meta">
       {{ post.date | date: "%Y-%m-%d" }}
     </p>
+  </div>
+  <hr>
+  {% endfor %}
 </div>
-<hr>
-{% endfor %}

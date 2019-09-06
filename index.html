@@ -3,97 +3,102 @@ layout: default
 title: Home
 ---
 
-{% if site.headline %}
-<div class="post">
-    {% include headline.html %}
-    <hr>
-</div>
-{% endif %}
+<div class="content container">
 
-<div class="posts">
-  {% for post in paginator.posts %}
+  {% if site.headline %}
   <div class="post">
-    <a href="{{ site.baseurl }}{{ post.url }}">
-      <h1 class="post-title">
-          {{ post.title }}
-      </h1>
-      {% if post.image %}
-        <img src="{{ site.baseurl }}{{ post.image }}" class="homethumbnail"><br>
-      {% endif %}
-    </a>
-
-    <div class="post-info">
-      <span class="post-date">
-        <i class="genericons-neue genericons-neue-week"></i>
-        <time class="entry-date published" datetime="{{ post.date | date_to_xmlschema}}">
-          {{ post.date | date: "%Y-%m-%d" }}
-        </time>
-      </span>
-      <span class="post-category">
-        {% for category in post.categories %}
-          <i class="genericons-neue genericons-neue-category"></i>
-          <a class="post-category" href="{{ site.baseurl }}/category/{{ category }}">
-            {{ category }}
-          </a>
-        {% endfor %}
-      </span>
-    </div>
-
-    <div class="entry">
-      {{ post.excerpt }}
-    </div>
-
-    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more</a>
+      {% include headline.html %}
+      <hr>
   </div>
-  <hr>
-  {% endfor %}
-</div>
-
-<!-- Pagination -->
-<nav aria-label="pagenation navbar">
-  <ul class="pagination justify-content-center pagination-lg">
-    {% if paginator.previous_page %}
-      {% if paginator.page == 2 %}
+  {% endif %}
+  
+  <div class="posts">
+    {% for post in paginator.posts %}
+    <div class="post">
+      <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+        <h2 class="post-title">
+          {{ post.title }}
+        </h2>
+        {% if post.image %}
+          <img src="{{ site.url }}{{ site.baseurl }}{{ post.image }}" class="homethumbnail">
+        {% endif %}
+      </a>
+  
+      <div class="post-info">
+        <span class="post-date">
+          <i class="fa fa-calendar"></i>
+          <time class="entry-date published" datetime="{{ post.date | date_to_xmlschema}}">
+            {{ post.date | date: "%Y-%m-%d" }}
+          </time>
+        </span>
+        <span class="post-category">
+          {% for category in post.categories %}
+            <i class="fa fa-folder"></i>
+            <a class="post-category" href="{{ site.url }}{{ site.baseurl }}/category/{{ category }}">
+              {{ category }}
+            </a>
+          {% endfor %}
+        </span>
+      </div>
+  
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+  
+      <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="read-more">Read more</a>
+    </div>
+    <hr>
+    {% endfor %}
+  </div>
+  
+  <!-- Pagination -->
+  <nav aria-label="pagenation navbar">
+    <ul class="pagination justify-content-center pagination-lg">
+      {% if paginator.previous_page %}
+        {% if paginator.page == 2 %}
+          <li class="page-item">
+            <a class="page-link" href="{{ site.url }}{{ site.baseurl }}/">
+              <i class="fa fa-arrow-left"></i>
+            </a>
+          </li>
+        {% else %}
+          <li class="page-item">
+            <a class="page-link" href="{{ site.url }}{{ site.baseurl }}/page{{paginator.previous_page}}">
+              <i class="fa fa-arrow-left"></i>
+            </a>
+          </li>
+        {% endif %}
+      {% else %}
+        <li class="page-item disabled">
+          <a class="page-link" href="{{ site.url }}{{ site.baseurl }}/">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+        </li>
+      {% endif %}
+  
+      <li class="page-item disabled">
+        <a class="page-link" href="{{ site.url }}{{ site.baseurl }}/">
+          Page {{ paginator.page }} / {{ paginator.total_pages }}
+        </a>
+      </li>
+  
+      {% if paginator.next_page %}
         <li class="page-item">
-          <a class="page-link" href="{{ site.baseurl }}/">
-            <i class="genericons-neue genericons-neue-previous"></i>
+          <a class="page-link" href="{{ site.url }}{{ site.baseurl }}/page{{paginator.next_page}}">
+            <i class="fa fa-arrow-right"></i>
           </a>
         </li>
       {% else %}
-        <li class="page-item">
-          <a class="page-link" href="{{ site.baseurl }}/page{{paginator.previous_page}}">
-            <i class="genericons-neue genericons-neue-previous"></i>
+        <li class="page-item disabled">
+          <a class="page-link" href="{{ site.url }}{{ site.baseurl }}/">
+            <i class="fa fa-arrow-right"></i>
           </a>
         </li>
       {% endif %}
-    {% else %}
-      <li class="page-item disabled">
-        <a class="page-link" href="{{ site.baseurl }}/">
-          <i class="genericons-neue genericons-neue-previous"></i>
-        </a>
-      </li>
-    {% endif %}
+  
+      
+    </ul>
+  </nav>
+  
+</div>
 
-    <li class="page-item disabled">
-      <a class="page-link" href="{{ site.baseurl }}/">
-        Page {{ paginator.page }} / {{ paginator.total_pages }}
-      </a>
-    </li>
-
-    {% if paginator.next_page %}
-      <li class="page-item">
-        <a class="page-link" href="{{ site.baseurl }}/page{{paginator.next_page}}">
-          <i class="genericons-neue genericons-neue-next"></i>
-        </a>
-      </li>
-    {% else %}
-      <li class="page-item disabled">
-        <a class="page-link" href="{{ site.baseurl }}/">
-          <i class="genericons-neue genericons-neue-next"></i>
-        </a>
-      </li>
-    {% endif %}
-
-    
-  </ul>
-</nav>

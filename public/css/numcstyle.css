@@ -1,0 +1,20 @@
+.divResults{
+  border:1px solid #000;
+  font-family:arial;
+  height:300px;
+  /* width:400px; */
+}
+.ulResults{
+  list-style:none;
+  /* max-height:300px; */
+  margin:0;
+  overflow:auto;
+  padding:0;
+  text-indent:10px;
+}
+.liResults{
+  line-height:25px;
+}
+.liResults:nth-child(even){
+  background:#ccc;
+}
