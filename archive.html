@@ -1,0 +1,24 @@
+---
+layout: page
+title: Archive
+permalink: /archive/
+filetype: html
+---
+
+<div class="content container">
+
+	<div class="list-group">
+
+		{% for post in site.posts %}
+			{% assign currentDate = post.date | date: "%Y" %}
+			{% if currentDate != myDate %}
+				<h3 class="archive-page-date" style="margin-top: 20px">{{ currentDate }}</h3>
+				{% assign myDate = currentDate %}
+			{% endif %}
+			<a class="list-group-item list-group-item-action" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+				<span>{{ post.date | date: "%Y-%m-%d" }}</span> &nbsp; &nbsp; {{ post.title }}
+			</a>
+		{% endfor %}
+
+	</div>
+</div>

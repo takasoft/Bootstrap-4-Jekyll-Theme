@@ -60,7 +60,7 @@ img.center {
 
 img.homethumbnail {
     display: block;
-    margin: 0 auto;
+    /* margin-bottom: 10px; */
     max-height:400px;
 }
 
@@ -74,7 +74,7 @@ img.postthumbnail {
 /* Meta data line below post title */
 .post-info {
   display: block;
-  margin-top: -.5rem;
+  /* margin-top: -.5rem; */
   margin-bottom: 1rem;
   color: #9a9a9a;
 }
@@ -121,7 +121,7 @@ img.postthumbnail {
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 /* Blog post or page title */
@@ -209,7 +209,55 @@ img.postthumbnail {
   max-width:300px;
 }
 
-.navbar-custom {
-  padding-bottom: 0px; 
-  margin-bottom: -30px;
+.container {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+/* .navbar-nav {
+  float:none;
+  margin:0 auto;
+  display: block;
+  text-align: center;
+}
+
+.navbar-nav > li {
+  display: inline-block;
+  float:none;
+} */
+
+.story-title {
+  text-align:center;
+}
+
+.project-caption {
+  /* max-width: 700px;  */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-filter: blur(3px) brightness(50%); /* Safari 6.0 - 9.0 */
+  filter: blur(3px) brightness(50%);
+  /* filter: brightness(50%); */
+}
+
+.bg-slightly-dark {
+  background-color: #d6d6d6;
+}
+
+.carousel-control-prev {
+  background-color: rgba(138, 138, 138, 0.3);
+  margin-bottom: 17px;
+}
+
+.carousel-control-next {
+  background-color: rgba(138, 138, 138, 0.3);
+  margin-bottom: 17px;
+}
+
+.bg-takao {
+  background: linear-gradient(-90deg, #003087, #009cde);
 }

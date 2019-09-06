@@ -73,6 +73,8 @@ bundle exec jekyll serve # start development server
 
 * Note: if you have changed _config.yml, you have to restart the development server
 
+* Note: When you use baseurl, the home page might not work on your local machine. In that case, just put `/` at the end and it will work. This problem will not occur on GitHub Pages.
+
 ## How to import from wordpress
 
 1. Install "WordPress to Jekyll Exporter"
