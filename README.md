@@ -9,6 +9,7 @@ Simple Bootstrap 4 theme for Jekyll
 ✓ Free hosting on your GitHub Pages user site  <br>
 ✓ Very light weight. It loads very fast even in 2G connections.  <br>
 ✓ Markdown blogging  <br>
+✓ Auto-generated "Related Posts" section on every post, ranked by shared `tags` and/or `categories`  <br>
 
 ✘ No installing dependencies  <br>
 ✘ No need to set up local development  <br>
@@ -60,6 +61,7 @@ category: new-category-name
 - set hideTnPost in post if you want to hide your post thumbnail.
 - set google_analytics in _config.yml if you want to log traffic on your site.
 - embed a youtube video by {% include youtubePlayer.html id="video-id" %}.
+- add `tags:` and/or `categories:` to a post's front matter to populate the auto-generated "Related Posts" section at the bottom of the post. Posts are ranked by overlap (more shared tags/categories = higher rank), with date as a tie-breaker. The section is hidden automatically if no other post shares any tag or category.
 
 ## Local Development
 
